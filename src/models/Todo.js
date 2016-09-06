@@ -12,4 +12,9 @@ TodoModel.create = function(todo){
   return request
 }
 
+TodoModel.deleteTodo = function(todoId){
+  var request = axios.delete(`http://localhost:4000/todos/${todoId}`)
+  return request
+}
+
 module.exports = TodoModel
